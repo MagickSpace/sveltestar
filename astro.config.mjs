@@ -25,7 +25,8 @@ export default defineConfig({
           // Images in the `public` directory are supported.
           url: 'https://sveltestar.vercel.app'
         }
-      }
+      },
+      recentPostCount: 7
     })],
     title: 'Sveltestar',
     social: {

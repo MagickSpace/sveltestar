@@ -10,10 +10,9 @@ import starlightBlog from 'starlight-blog'
 import AutoImport from 'unplugin-auto-import/astro'
 import Icons from 'unplugin-icons/vite'
 import imagemin from 'unplugin-imagemin/vite'
-import LightningCSS from 'unplugin-lightningcss/vite'
+import LightningCSS from 'unplugin-lightningcss/vite';
 import TurboConsole from 'unplugin-turbo-console/astro'
-import { viteVueCE } from 'unplugin-vue-ce'
-
+import { viteVueCE } from 'unplugin-vue-ce';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://sveltestar.vercel.com',

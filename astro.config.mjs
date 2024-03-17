@@ -6,12 +6,16 @@ import { pluginCollapsibleSections } from '@expressive-code/plugin-collapsible-s
 import { pluginLineNumbers } from '@expressive-code/plugin-line-numbers';
 import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
-
+import liveCode from 'astro-live-code';
 import svelte from "@astrojs/svelte";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [starlight({
+  integrations: [liveCode({
+    layout: './src/layouts/LiveCodeLayout.astro',
+    wrapper: './src/components/MyWrapper.jsx',
+  }),
+    starlight({
     plugins: [starlightBlog({
       authors: {
         hideoo: {

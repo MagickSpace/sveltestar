@@ -21,6 +21,7 @@
     "@expressive-code/plugin-line-numbers": "^0.33.5",
     "add": "^2.0.6",
     "astro": "^4.3.5",
+    "astro-live-code": "^0.0.2",
     "mdast-util-to-markdown": "^2.1.0",
     "mdast-util-to-string": "^4.0.0",
     "remark-expressive-code": "^0.33.5",

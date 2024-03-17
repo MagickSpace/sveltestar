@@ -8,14 +8,35 @@ import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
 import liveCode from 'astro-live-code';
 import svelte from "@astrojs/svelte";
+import Icons from 'unplugin-icons/vite';
+import AutoImport from 'unplugin-auto-import/astro';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [liveCode({
+  site: 'https://sveltestar.vercel.com',
+  vite: {
+    plugins: [Icons({ compiler: 'astro' })],
+  },
+  integrations: [
+      AutoImport({
+        imports: [
+          'vue',
+          'vue/macros',
+          'svelte',
+          'svelte/store',
+          'react',
+        ],
+        dts: './src/auto-imports.d.ts',
+      }),
+    liveCode({
     layout: './src/layouts/LiveCodeLayout.astro',
     wrapper: './src/components/MyWrapper.jsx',
   }),
     starlight({
+      components: {
+        // Relative path to the custom component.
+        Head: './src/components/Head.astro',
+      },
     plugins: [starlightBlog({
       authors: {
         hideoo: {

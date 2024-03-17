@@ -19,9 +19,11 @@
     "@astrojs/ts-plugin": "^1.6.0",
     "@expressive-code/plugin-collapsible-sections": "^0.33.5",
     "@expressive-code/plugin-line-numbers": "^0.33.5",
+    "@iconify/json": "^2.2.192",
     "add": "^2.0.6",
     "astro": "^4.3.5",
     "astro-live-code": "^0.0.2",
+    "astro-og-canvas": "^0.4.2",
     "autoprefixer": "^10.4.18",
     "mdast-util-to-markdown": "^2.1.0",
     "mdast-util-to-string": "^4.0.0",
@@ -34,7 +36,9 @@
     "svelte": "^4.2.12",
     "tsm": "^2.3.0",
     "typescript": "^5.4.2",
-    "unist-util-visit": "^5.0.0"
+    "unist-util-visit": "^5.0.0",
+    "unplugin-auto-import": "^0.17.5",
+    "unplugin-icons": "^0.18.5"
   },
   "overrides": {
     "astro-expressive-code": "latest"

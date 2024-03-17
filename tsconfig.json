@@ -4,6 +4,7 @@
     "strictNullChecks": true,
     "jsx": "preserve",
     "jsxImportSource": "react",
+    "types": ["unplugin-icons/types/astro"],
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "target": "ESNext",
     "module": "ESNext",

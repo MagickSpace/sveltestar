@@ -4,9 +4,9 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "bunx --bun astro dev --verbose",
-    "start": "astro dev",
-    "build": "astro check && astro build",
-    "preview": "astro preview",
+    "start": "bun astro check && bunx --bun astro dev --verbose",
+    "build": "bun astro check && bunx --bun astro build",
+    "preview": "bunx --bun astro preview",
     "astro": "astro",
     "biomes": "bunx @biomejs/biome check --apply ./src/ "
   },
@@ -17,6 +17,7 @@
     "@astrojs/starlight": "^0.21.1",
     "@astrojs/svelte": "^5.2.0",
     "@astrojs/ts-plugin": "^1.6.0",
+    "@astrojs/vue": "^4.0.9",
     "@expressive-code/plugin-collapsible-sections": "^0.33.5",
     "@expressive-code/plugin-line-numbers": "^0.33.5",
     "@iconify/json": "^2.2.192",
@@ -38,14 +39,17 @@
     "typescript": "^5.4.2",
     "unist-util-visit": "^5.0.0",
     "unplugin-auto-import": "^0.17.5",
-    "unplugin-icons": "^0.18.5"
+    "unplugin-icons": "^0.18.5",
+    "vue": "^3.4.21"
   },
   "overrides": {
     "astro-expressive-code": "latest"
   },
   "devDependencies": {
     "@biomejs/biome": "1.6.1",
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "svelte-adapter-bun": "^0.5.2",
+    "unplugin-imagemin": "latest"
   },
   "description": "[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)",
   "keywords": [],

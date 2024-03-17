@@ -2,5 +2,17 @@
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "features": {
     "ghcr.io/audacioustux/devcontainers/bun:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "hideoo.starlight-i18n",
+        "astro-build.astro-vscode",
+        "unifiedjs.vscode-mdx",
+        "biomejs.biome",
+        "bierner.github-markdown-preview",
+        "eliostruyf.vscode-front-matter-beta"
+      ]
+    }
   }
 }

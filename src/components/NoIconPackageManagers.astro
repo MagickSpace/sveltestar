@@ -1,0 +1,11 @@
+---
+import {
+  PackageManagers,
+  type PackageManagersProps,
+} from 'starlight-package-managers'
+
+type Props = PackageManagersProps
+---
+
+{/* Hide the icons. */}
+<PackageManagers icons={false} {...Astro.props} />

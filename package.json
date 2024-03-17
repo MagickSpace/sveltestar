@@ -1,0 +1,50 @@
+{
+  "name": "sveltestar",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "bunx --bun astro dev --verbose",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "biomes": "bunx @biomejs/biome check --apply ./src/ "
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.5.9",
+    "@astrojs/mdx": "^2.2.0",
+    "@astrojs/sitemap": "^3.1.1",
+    "@astrojs/starlight": "^0.21.1",
+    "@astrojs/svelte": "^5.2.0",
+    "@astrojs/ts-plugin": "^1.6.0",
+    "@expressive-code/plugin-collapsible-sections": "^0.33.5",
+    "@expressive-code/plugin-line-numbers": "^0.33.5",
+    "add": "^2.0.6",
+    "astro": "^4.3.5",
+    "mdast-util-to-markdown": "^2.1.0",
+    "mdast-util-to-string": "^4.0.0",
+    "remark-expressive-code": "^0.33.5",
+    "sharp": "^0.32.5",
+    "starlight-blog": "^0.5.1",
+    "starlight-package-managers": "^0.4.0",
+    "svelte": "^4.2.12",
+    "tsm": "^2.3.0",
+    "typescript": "^5.4.2",
+    "unist-util-visit": "^5.0.0"
+  },
+  "overrides": {
+    "astro-expressive-code": "latest"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.6.1",
+    "@types/bun": "latest"
+  },
+  "description": "[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)",
+  "keywords": [],
+  "author": "MagickSpace <146006257+MagickSpace@users.noreply.github.com>",
+  "license": "ISC",
+  "repository": "https://github.com/MagickSpace/sveltestar",
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

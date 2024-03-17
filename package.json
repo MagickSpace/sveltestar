@@ -3,12 +3,13 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
+    "prepare": "bun bun.lockb",
     "dev": "bunx --bun astro dev --verbose",
     "start": "bun astro check && bunx --bun astro dev --verbose",
     "build": "bun astro check && bunx --bun astro build",
     "preview": "bunx --bun astro preview",
     "astro": "astro",
-    "biomes": "bunx @biomejs/biome check --apply ./src/ "
+    "biomes": "bunx @biomejs/biome check --apply ./src/** "
   },
   "dependencies": {
     "@astrojs/check": "^0.5.9",

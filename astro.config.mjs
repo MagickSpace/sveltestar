@@ -2,8 +2,6 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightBlog from 'starlight-blog';
 import expressiveCode from "astro-expressive-code";
-import { pluginCollapsibleSections } from '@expressive-code/plugin-collapsible-sections';
-import { pluginLineNumbers } from '@expressive-code/plugin-line-numbers';
 import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
 import liveCode from 'astro-live-code';
@@ -11,18 +9,22 @@ import svelte from "@astrojs/svelte";
 import Icons from 'unplugin-icons/vite';
 import AutoImport from 'unplugin-auto-import/astro';
 import imagemin from 'unplugin-imagemin/vite';
-
 import vue from "@astrojs/vue";
+import { viteVueCE } from 'unplugin-vue-ce'
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://sveltestar.vercel.com',
   vite: {
-    plugins: [Icons({
+    plugins: [
+      vue(),
+      viteVueCE(),
+      Icons({
       compiler: 'astro'
-    }), imagemin({
+    }), 
+    imagemin({
       // Default mode sharp. support squoosh and sharp
-      mode: 'squoosh',
+      mode: 'sharp',
       beforeBundle: true,
       // Default configuration options for compressing different pictures
       compress: {

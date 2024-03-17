@@ -29,5 +29,6 @@
         "name": "@astrojs/ts-plugin"
       }
     ]
-  }
+  },
+  "include": ["./src/env.d.ts", "./src/auto-imports.d.ts"]
 }

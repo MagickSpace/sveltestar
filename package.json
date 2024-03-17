@@ -49,7 +49,8 @@
     "@biomejs/biome": "1.6.1",
     "@types/bun": "latest",
     "svelte-adapter-bun": "^0.5.2",
-    "unplugin-imagemin": "latest"
+    "unplugin-imagemin": "latest",
+    "unplugin-vue-ce": "^1.0.0-beta.19"
   },
   "description": "[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)",
   "keywords": [],

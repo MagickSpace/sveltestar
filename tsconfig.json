@@ -22,7 +22,7 @@
     "noPropertyAccessFromIndexSignature": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./src/*"]
     },
     "plugins": [
       {

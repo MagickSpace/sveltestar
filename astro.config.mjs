@@ -10,7 +10,8 @@ import Icons from 'unplugin-icons/vite';
 import AutoImport from 'unplugin-auto-import/astro';
 import imagemin from 'unplugin-imagemin/vite';
 import vue from "@astrojs/vue";
-import { viteVueCE } from 'unplugin-vue-ce'
+import { viteVueCE } from 'unplugin-vue-ce';
+import TurboConsole from 'unplugin-turbo-console/astro';
 
 // https://astro.build/config
 export default defineConfig({
@@ -53,7 +54,9 @@ export default defineConfig({
       }]
     })]
   },
-  integrations: [AutoImport({
+  integrations: [
+    TurboConsole(),
+    AutoImport({
     imports: ['vue', 'vue/macros', 'svelte', 'svelte/store', 'react'],
     dts: './src/auto-imports.d.ts'
   }), liveCode({

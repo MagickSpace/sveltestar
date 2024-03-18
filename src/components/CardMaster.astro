@@ -1,0 +1,51 @@
+---
+
+---
+
+<div class="card">
+    <img class="card-image" … />
+    <div class="card-content">
+        <div class="card-title">Mountain</div>
+        <div class="card-text">A mountain is an elevated portion of the Earth's crust, generally with steep sides that show significant exposed bedrock.</div>
+    </div>
+</div>
+
+<style>
+
+    .card {
+        display: flex;
+        background-color: paleturquoise;
+    }
+
+    .card:hover {
+        transform: translateY(-0.3125rem);
+    }
+
+    .card-image {
+        object-fit: cover;
+        width: 8.75rem;
+        aspect-ratio: 16 / 9;
+    }
+
+    .card-content {
+        padding: 1.5625rem;
+    }
+
+    .card-title {
+        font-weight: 600;
+        font-size: 1.125rem;
+        line-height: calc(1.125rem + 0.875em);
+    }
+
+    .card-text {
+        font-size: 0.875rem;
+        line-height: calc(0.875rem + 0.875em);
+        overflow: hidden;
+        display: -webkit-box;
+        overflow-wrap: break-word;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+    }
+
+</style>

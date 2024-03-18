@@ -1,21 +1,22 @@
 import mdx from '@astrojs/mdx'
+import node from '@astrojs/node'
 import sitemap from '@astrojs/sitemap'
 import starlight from '@astrojs/starlight'
 import svelte from '@astrojs/svelte'
+import tailwind from '@astrojs/tailwind'
 import vue from '@astrojs/vue'
 import expressiveCode from 'astro-expressive-code'
 import liveCode from 'astro-live-code'
 import { defineConfig } from 'astro/config'
 import starlightBlog from 'starlight-blog'
+import starlightLinksValidator from 'starlight-links-validator'
 import AutoImport from 'unplugin-auto-import/astro'
 import Icons from 'unplugin-icons/vite'
 import imagemin from 'unplugin-imagemin/vite'
 import LightningCSS from 'unplugin-lightningcss/vite'
-import TurboConsole from 'unplugin-turbo-console/astro'
 import { viteVueCE } from 'unplugin-vue-ce'
-import tailwind from '@astrojs/tailwind'
-import starlightLinksValidator from 'starlight-links-validator'
-import node from '@astrojs/node'
+import CSSExtractorPlugin from '@master/css-extractor.vite'
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://sveltestar.vercel.com',
@@ -28,6 +29,9 @@ export default defineConfig({
       transformer: "lightningcss",
     },
     plugins: [
+      CSSExtractorPlugin({
+        module: '.virtual/master.css'
+    }),
       LightningCSS(),
       vue(),
       viteVueCE(),
@@ -71,8 +75,7 @@ export default defineConfig({
     ],
   },
   integrations: [
-    TurboConsole({
-    }),
+
     AutoImport({
       imports: ['vue', 'vue/macros', 'svelte', 'svelte/store', 'react'],
       dts: './src/auto-imports.d.ts',

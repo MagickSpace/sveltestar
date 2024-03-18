@@ -11,7 +11,9 @@ const ogImageUrl = new URL(
 ---
 
 <!-- Render the default <Head/> component. -->
-<Default {...Astro.props}><slot /></Default>
+<Default {...Astro.props}>
+<script src="../../scripts/main.js"></script>
+<slot /></Default>
 
 <!-- Render the <meta/> tags for the Open Graph images. -->
 <meta property="og:image" content={ogImageUrl} />

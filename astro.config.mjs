@@ -15,9 +15,14 @@ import TurboConsole from 'unplugin-turbo-console/astro'
 import { viteVueCE } from 'unplugin-vue-ce'
 import tailwind from '@astrojs/tailwind'
 import starlightLinksValidator from 'starlight-links-validator'
+import node from '@astrojs/node'
 // https://astro.build/config
 export default defineConfig({
   site: 'https://sveltestar.vercel.com',
+  output: 'hybrid',
+  adapter: node({
+    mode: 'middleware',
+  }),
   vite: {
     css: {
       transformer: "lightningcss",

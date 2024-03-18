@@ -31,5 +31,17 @@
     },
     "editor.minimap.enabled": false
   },
-  "astro.format.indentFrontmatter": false
+  "astro.format.indentFrontmatter": false,
+  
+  "markdown.editor.filePaste.enabled": true,
+  // Copy pasted media files into a Markdown editor to the workspace.
+  "markdown.editor.filePaste.copyIntoWorkspace": "mediaFiles",
+  // Copy pasted files in documentation pages to the `src/assets/` directory.
+   // Enable dropping files into a Markdown editor to create Markdown links.
+   "markdown.editor.drop.enabled": true,
+   // Copy dropped media files into a Markdown editor to the workspace.
+   "markdown.editor.drop.copyIntoWorkspace": "mediaFiles",
+  "markdown.copyFiles.destination": {
+    "/src/content/docs/**/*": "/src/assets/${documentBaseName}/"
+  }
 }

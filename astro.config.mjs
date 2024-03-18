@@ -14,6 +14,7 @@ import LightningCSS from 'unplugin-lightningcss/vite'
 import TurboConsole from 'unplugin-turbo-console/astro'
 import { viteVueCE } from 'unplugin-vue-ce'
 import tailwind from '@astrojs/tailwind'
+import starlightLinksValidator from 'starlight-links-validator'
 // https://astro.build/config
 export default defineConfig({
   site: 'https://sveltestar.vercel.com',
@@ -76,6 +77,24 @@ export default defineConfig({
       wrapper: './src/components/MyWrapper.jsx',
     }),
     starlight({
+      head: [
+        // Add a custom meta tag to define the author of all pages.
+        {
+          tag: 'meta',
+          attrs: {
+            name: 'author',
+            content: 'Devopsick',
+          },
+        },
+        {
+          tag: 'link',
+          attrs: {
+            rel: 'icon',
+            href:'/favicon.ico',
+            sizes: '32x32',
+          },
+        },
+      ],
       components: {
         // Relative path to the custom component.
         Head: './src/components/Head.astro',
@@ -85,6 +104,11 @@ export default defineConfig({
         './src/styles/tailwind.css',
       ],
       plugins: [
+        starlightLinksValidator({
+          errorOnFallbackPages: false,
+          errorOnInconsistentLocale: true,
+          errorOnRelativeLinks: false,
+        }),
         starlightBlog({
           authors: {
             hideoo: {

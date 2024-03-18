@@ -21,7 +21,9 @@ import bun from 'astro-bun';
 export default defineConfig({
   site: 'https://sveltestar.vercel.com',
   output: "hybrid",
-  adapter: bun({}),
+  adapter: bun({
+    adapter: node,
+  }),
   vite: {
     css: {
       transformer: "lightningcss",

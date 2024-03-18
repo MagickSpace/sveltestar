@@ -15,23 +15,18 @@ import Icons from 'unplugin-icons/vite'
 import imagemin from 'unplugin-imagemin/vite'
 import LightningCSS from 'unplugin-lightningcss/vite'
 import { viteVueCE } from 'unplugin-vue-ce'
-import CSSExtractorPlugin from '@master/css-extractor.vite'
+import bun from 'astro-bun';
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://sveltestar.vercel.com',
-  output: 'hybrid',
-  adapter: node({
-    mode: 'middleware',
-  }),
+  output: "hybrid",
+  adapter: bun({}),
   vite: {
     css: {
       transformer: "lightningcss",
     },
     plugins: [
-      CSSExtractorPlugin({
-        module: '.virtual/master.css'
-    }),
       LightningCSS(),
       vue(),
       viteVueCE(),

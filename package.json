@@ -30,6 +30,7 @@
     "@vue/compiler-sfc": "^3.4.21",
     "add": "^2.0.6",
     "astro": "4.5.5",
+    "astro-bun": "^0.0.5-beta",
     "astro-live-code": "^0.0.2",
     "astro-og-canvas": "^0.4.2",
     "autoprefixer": "^10.4.18",

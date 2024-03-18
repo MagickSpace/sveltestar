@@ -10,9 +10,10 @@ import starlightBlog from 'starlight-blog'
 import AutoImport from 'unplugin-auto-import/astro'
 import Icons from 'unplugin-icons/vite'
 import imagemin from 'unplugin-imagemin/vite'
-import LightningCSS from 'unplugin-lightningcss/vite';
+import LightningCSS from 'unplugin-lightningcss/vite'
 import TurboConsole from 'unplugin-turbo-console/astro'
-import { viteVueCE } from 'unplugin-vue-ce';
+import { viteVueCE } from 'unplugin-vue-ce'
+import tailwind from '@astrojs/tailwind'
 // https://astro.build/config
 export default defineConfig({
   site: 'https://sveltestar.vercel.com',
@@ -64,7 +65,8 @@ export default defineConfig({
     ],
   },
   integrations: [
-    TurboConsole(),
+    TurboConsole({
+    }),
     AutoImport({
       imports: ['vue', 'vue/macros', 'svelte', 'svelte/store', 'react'],
       dts: './src/auto-imports.d.ts',
@@ -78,6 +80,10 @@ export default defineConfig({
         // Relative path to the custom component.
         Head: './src/components/Head.astro',
       },
+      customCss: [
+        // Path to your Tailwind base styles:
+        './src/styles/tailwind.css',
+      ],
       plugins: [
         starlightBlog({
           authors: {
@@ -121,6 +127,10 @@ export default defineConfig({
     svelte(),
     vue({
       reactivityTransform: true,
+    }),
+    tailwind({
+      nesting: true,
+      applyBaseStyles: false,
     }),
   ],
 })
